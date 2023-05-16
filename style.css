@@ -1,0 +1,100 @@
+body{
+  background: rgb(22, 22, 66) !important;
+}
+
+h1{
+  color: white !important;
+  font-size: 50px !important;
+  text-align: center;
+}
+
+
+.calculator {
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-block-start: 100px;
+  max-inline-size: 23rem;
+  overflow:hidden;
+  background-color: rgb(35, 35, 105);
+  transform:  rotateY('45deg');
+  
+
+}
+
+.calculator__display {
+  background:rgb(0, 78, 78);
+  font-size: 4.2rem;
+  padding-block-start: 5rem;
+  padding-block-end: 0.5rem;
+  padding-inline-end: 1.25rem;
+  text-align: end;
+  color: white;
+  overflow-x: scroll;
+}
+
+.calculator__display::-webkit-scrollbar{
+  width: 10px;
+  background-color: rgb(16, 16, 59);
+}
+
+.calculator__display::-webkit-scrollbar-thumb{
+  
+  background-color: rgb(19, 122, 145);
+}
+
+.calculator__display::-webkit-scrollbar-track{
+  
+  background-color: rgb(13, 86, 102);
+}
+
+.calculator__keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  background: rgb(17, 17, 57);
+  padding: 0.5rem;
+}
+.calculator__key {
+  background: rgb(16, 16, 59);
+  color: hsl(255, 100%, 100%);
+  border: none;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline-end: 1.25rem;
+  padding-inline-start: 1.25rem;
+  font-size: 1.5rem;
+  /* Playful Styles */
+  inline-size: 70px;
+  block-size: 70px;
+  margin: 0.25rem;
+  border-radius: 40px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+.calculator__key:hover{
+  background-color: rgb(56, 71, 240);
+
+}
+
+.calculator__key:active,
+.calculator__key:focus {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3) inset;
+  outline: none;
+  background-color: rgb(56, 71, 240);
+}
+.calculator__key--operator {
+  background: rgb(0, 78, 78);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+}
+.calculator__key--operator:active {
+  background-color: rgb(56, 71, 240);
+
+}
+.calculator__key--enter {
+  grid-column: 4 / 5;
+  grid-row: 2 / span 4;
+  background:rgb(0, 78, 78);
+  height: auto;
+}
