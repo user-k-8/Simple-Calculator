@@ -39,15 +39,19 @@ forEach(k => k.classList.remove('is-depressed'));
 
 // When a number is clicked 
 if (!action) {
-  // if current number is the default 0, or the previous key was an operator or equal sign, display the clicked number
+  // if current number is the default 0, or the previous key was an operator , display the clicked number
   if (
   displayedNum === '0' ||
-  previousKeyType === 'operator' ||
-  previousKeyType === 'calculate')
+  previousKeyType === 'operator' )
   {
     display.textContent = keyContent; 
-    // else  concatenate clicked number with displayed number 
-  } else {
+  }
+  else if( previousKeyType==="calculate"){ // else if previous key  was an equal sign reset first value
+    display.textContent = keyContent; 
+    calculator.dataset.firstValue= "";
+
+  } //else  concatenate clicked number with displayed number
+  else {
     display.textContent = displayedNum + keyContent; 
   }
   calculator.dataset.previousKeyType = 'number';  // sets previous-key-type value to 'number' because a number was clicked
@@ -79,7 +83,8 @@ if(action==='add' ||
 
   //  if firstValue is null let the currently displayed value be our first value
     if(calculator.dataset.firstValue==null || 
-      calculator.dataset.previousKeyType=="calculate"){
+      calculator.dataset.previousKeyType=="calculate" ||
+      calculator.dataset.firstValue== ""){
         calculator.dataset.firstValue =display.textContent;
     }
     else{
@@ -104,6 +109,10 @@ if(action==='add' ||
 //When the equal sign is clicked 
 if(action==="calculate"){
 
+  if(calculator.dataset.firstValue==null){
+    calculator.dataset.firstValue =display.textContent;
+  }else{
+
   //let the currently displayed value be our second value
   secondValue = Number(display.textContent);
   firstValue =  Number(calculator.dataset.firstValue)
@@ -114,6 +123,7 @@ if(action==="calculate"){
   
   //display result
   display.textContent=calculatedValue;
+  }
   calculator.dataset.previousKeyType = 'calculate'; // sets previus-key-type value to operator because the equals key was clicked
 }
 
