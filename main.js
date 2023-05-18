@@ -1,4 +1,4 @@
-// Arithmetic functions
+ // Arithmetic functions
 function calc(firstValue,operator, secondValue){
 
   let result;
@@ -127,13 +127,16 @@ if(action==="calculate"){
   calculator.dataset.previousKeyType = 'calculate'; // sets previus-key-type value to operator because the equals key was clicked
 }
 
+// refresh page
+
+if (action==="reset") {
+  calculator.dataset.operator = "";
+  calculator.dataset.firstValue="";
+  calculator.dataset.previousKeyType ="";
+  display.textContent ="0"
+}
+
 }
 }
 ) 
 
-// refresh page
-document.getElementById("reset").addEventListener("click", 
-function(){
-    
-    location.reload();
-});
