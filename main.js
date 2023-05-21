@@ -130,13 +130,11 @@ if(action==="calculate"){
 // refresh page
 
 if (action==="reset") {
-    // remove  the .is-depressed state
-   Array.from(key.parentNode.children).
-   forEach(k => k.classList.remove('is-depressed'));
+  display.textContent =0;
   calculator.dataset.operator = "";
   calculator.dataset.firstValue="";
   calculator.dataset.previousKeyType ="";
-  display.textContent =0;
+ 
 }
 if(display.textContent==="AC"){
   display.textContent =0
