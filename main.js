@@ -133,11 +133,11 @@ if (action==="reset") {
   display.textContent =0;
   calculator.dataset.operator = "";
   calculator.dataset.firstValue="";
-  calculator.dataset.previousKeyType ="";
+  calculator.dataset.previousKeyType ="clear";
  
 }
-if(display.textContent==="AC"){
-  display.textContent =0
+if(display.textContent==="AC" || previousKeyType === "clear"){
+  display.textContent =0;
 }
 
 }
