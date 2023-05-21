@@ -138,6 +138,9 @@ if (action==="reset") {
   calculator.dataset.previousKeyType ="";
   display.textContent =0;
 }
+if(display.textContent==="AC"){
+  display.textContent =0
+}
 
 }
 }
