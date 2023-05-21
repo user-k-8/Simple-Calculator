@@ -133,7 +133,7 @@ if (action==="reset") {
   calculator.dataset.operator = "";
   calculator.dataset.firstValue="";
   calculator.dataset.previousKeyType ="";
-  display.textContent ="0"
+  display.textContent =0;
 }
 
 }
