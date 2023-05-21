@@ -51,7 +51,7 @@ if (!action) {
     calculator.dataset.firstValue= "";
 
   } //else  concatenate clicked number with displayed number
-  else if( previousKeyType!=="clear"){
+  else {
     display.textContent = displayedNum + keyContent; 
   }
   calculator.dataset.previousKeyType = 'number';  // sets previous-key-type value to 'number' because a number was clicked
@@ -135,9 +135,6 @@ if (action==="reset") {
   calculator.dataset.firstValue='';
   calculator.dataset.previousKeyType = 'clear';
  
-}
-if(display.textContent==="AC" || previousKeyType === "clear"){
-  display.textContent =0;
 }
 
 }
