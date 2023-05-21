@@ -131,9 +131,9 @@ if(action==="calculate"){
 
 if (action==="reset") {
   display.textContent =0;
-  calculator.dataset.operator = "";
-  calculator.dataset.firstValue="";
-  calculator.dataset.previousKeyType ="clear";
+  calculator.dataset.operator = '';
+  calculator.dataset.firstValue='';
+  calculator.dataset.previousKeyType = 'clear';
  
 }
 if(display.textContent==="AC" || previousKeyType === "clear"){
